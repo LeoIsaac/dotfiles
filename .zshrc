@@ -12,8 +12,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+setopt HIST_IGNORE_DUPS
 
-autoload -U colors && colors
-PROMPT="$fg_bold[blue]%~$reset_color
-%{$fg_bold[green]%}>%{$fg_bold[yellow]%}>%{$fg_bold[red]%}>%{$reset_color%} "
+zstyle ':completion:*' menu select
 
+BASEDIR=$(dirname $(readlink -f $HOME/.zshrc))
+for f in $BASEDIR/bin/*
+do
+    source $f
+done
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
