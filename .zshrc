@@ -14,7 +14,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-setopt HIST_IGNORE_DUPS #履歴を重複させない
+setopt hist_ignore_dups #履歴を重複させない
+setopt share_history #端末間で履歴共有
+
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
 
 zstyle ':completion:*' menu select #補完候補を矢印で移動
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' #大文字小文字を区別しない

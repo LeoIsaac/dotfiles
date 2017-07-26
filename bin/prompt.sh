@@ -15,9 +15,16 @@ if is-at-least 4.3.10; then
   zstyle ':vcs_info:*' actionformats '[%b|%a]'
 fi
 
+is_clear=1
+
 precmd() {
+  [[ $is_clear -eq 0 ]] && echo
+  is_clear=0
+
   psvar=()
   vcs_info
   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 RPROMPT="%1(v|%1v%f|)"
+
+alias clear='clear; is_clear=1'
