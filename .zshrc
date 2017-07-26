@@ -27,7 +27,7 @@ zstyle ':completion:*' menu select #補完候補を矢印で移動
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' #大文字小文字を区別しない
 
 BASEDIR=`dirname $(readlink -f $HOME/.zshrc)`
-for f in $BASEDIR/bin/*
+for f in $BASEDIR/conf.d/*
 do
     source $f
 done
