@@ -1,0 +1,11 @@
+[user]
+	email = leo@i544c.me
+	name = i544c
+
+[pager]
+	log  = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+
+[fetch]
+	prune = true
