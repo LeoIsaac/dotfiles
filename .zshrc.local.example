@@ -1,15 +1,8 @@
 export EDITOR=vim
 alias pbcopy='xsel --clipboard --input'
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-eval "$(rbenv init -)"
-
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
 
 if [[ ! -n $TMUX ]]; then
   tmux new-session
