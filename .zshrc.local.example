@@ -1,5 +1,7 @@
 export EDITOR=vim
 alias pbcopy='xsel --clipboard --input'
+alias rails='bundle exec spring rails'
+alias rake='bundle exec spring rake'
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
