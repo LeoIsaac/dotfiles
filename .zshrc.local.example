@@ -7,5 +7,19 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 if [[ ! -n $TMUX ]]; then
-  tmux new-session
+  ID=`tmux list-sessions`
+  if [[ -z $ID ]]; then
+    tmux new-session
+  fi
+
+  create_new_session="Create New Session"
+  ID="$ID\n${create_new_session}:\nexit"
+  ID=`echo $ID | percol | cut -d: -f1`
+  if [[ "$ID" = ${create_new_session} ]]; then
+    tmux new-session
+  elif [[ "$ID" = "exit" ]]; then
+    :
+  else
+    tmux attach-session -t $ID
+  fi
 fi
