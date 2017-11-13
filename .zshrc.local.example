@@ -2,6 +2,7 @@ export EDITOR=vim
 alias pbcopy='xsel --clipboard --input'
 alias rails='bundle exec spring rails'
 alias rake='bundle exec spring rake'
+alias speedometer='speedometer -r enp0s25'
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"

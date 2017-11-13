@@ -1,35 +1,39 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
-
 if &compatible
-      set nocompatible               " Be iMproved
+  set nocompatible
+endif
+
+set runtimepath+=/home/isaac/.local/share/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('/home/isaac/.local/share/dein')
+  call dein#begin('/home/isaac/.local/share/dein')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('/home/isaac/.local/share/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add("airblade/vim-gitgutter")
+  call dein#add("scrooloose/nerdtree")
+  call dein#add("jistr/vim-nerdtree-tabs")
+  call dein#add("Xuyuanp/nerdtree-git-plugin")
+
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
 endif
 
 " Required:
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-NeoBundle "airblade/vim-gitgutter"
-NeoBundle "scrooloose/nerdtree"
-NeoBundle "jistr/vim-nerdtree-tabs"
-map <C-n> <plug>NERDTreeTabsToggle<CR>
-NeoBundle "Xuyuanp/nerdtree-git-plugin"
-
-call neobundle#end()
-
-" Required:
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
+map <C-n> <plug>NERDTreeTabsToggle<CR>
