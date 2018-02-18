@@ -3,6 +3,7 @@ alias pbcopy='xsel --clipboard --input'
 alias rails='bundle exec spring rails'
 alias rake='bundle exec spring rake'
 alias speedometer='speedometer -r enp0s25'
+alias cmatrix='cmatrix -u6'
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"

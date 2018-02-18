@@ -7,11 +7,6 @@
 	show = diff-highlight | less
 	diff = diff-highlight | less
 
-[url "ssh://"]
-  insteadOf = git://
-[url "ssh://"]
-  insteadOf = https://
-
 [fetch]
 	prune = true
 [core]
