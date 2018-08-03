@@ -15,3 +15,6 @@
 	diffFilter = diff-highlight
 [diff]
 	compactionHeuristic = true
+
+[alias]
+  graph = log --graph --branches

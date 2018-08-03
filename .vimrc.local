@@ -2,14 +2,14 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath+=/home/isaac/.local/share/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=$HOME/.local/share/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('/home/isaac/.local/share/dein')
-  call dein#begin('/home/isaac/.local/share/dein')
+if dein#load_state('$HOME/.local/share/dein')
+  call dein#begin('$HOME/.local/share/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/isaac/.local/share/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('$HOME/.local/share/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')

@@ -5,6 +5,9 @@ set whichwrap=b,s,<,>,[,]
 "表示
 set cursorline "現在の行の強調表示
 set laststatus=2 "ステータス行を常に表示
+set statusline=%-20f
+set statusline+=%=
+set statusline+=%4l/%-4L
 set showmatch "対応する括弧の強調表示
 set wildmenu "補完
 set wildmode=longest:full,full "補完を良い感じに

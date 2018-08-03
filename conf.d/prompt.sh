@@ -24,7 +24,10 @@ precmd() {
 }
 #RPROMPT="%1(v|%1v%f|)"
 
-PROMPT="%1(v|%1v%f |)%{$fg_bold[blue]%}%~%{$reset_color%}
-%{%(?.$fg_bold[green].$fg_bold[red])%}>%{%(?.$fg_bold[yellow].$fg_bold[red])%}>%{$fg_bold[red]%}>%{$reset_color%} "
+#PROMPT="%1(v|%1v%f |)%{$fg_bold[green]%}%~%{$reset_color%}
+#%{%(?.$fg_bold[blue].$fg_bold[red])%}>%{%(?.$fg_bold[yellow].$fg_bold[red])%}>%{$fg_bold[red]%}>%{$reset_color%} "
+
+PROMPT="%1(v|%1v%f |)%{$fg_bold[green]%}%~%{$reset_color%}
+💎🔆🌸 > "
 
 alias clear='clear; is_clear=1'
