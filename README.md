@@ -1,2 +1,4 @@
 # dotfiles
-環境管理のために。
+
+## DEPRECATED
+Move to https://github.com/i544c/dotfiles-light
